@@ -12,15 +12,15 @@ package ejemplos;
 public class paras100 {
     public static void main(String[] args) {
         int pares=0;
-        int n = 1;
+        int n = 202;
         while(pares<=100){
             if((n%2)==0){
                 System.out.println(n);
-                n++;
+                n--;
                 pares++;        
             }
             else{
-                n++;
+                n--;
             }
         }
     }

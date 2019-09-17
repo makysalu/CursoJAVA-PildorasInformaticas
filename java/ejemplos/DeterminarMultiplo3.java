@@ -10,20 +10,21 @@ package ejemplos;
  * @author diego
  */
 import java.util.Scanner;
-public class ParesImpares {
+public class DeterminarMultiplo3 {
     public static void main(String[] args) {
-     Scanner sc = new Scanner(System.in);
-     System.out.print("Introduce el numero maximo: ");
-     int maximo = sc.nextInt();
-     for(int cont=1; cont<=maximo; cont++){
-         int numero = numero();
-         if((numero%2)==0){
-             System.out.println("El numero "+numero+" es par");
-         }
-         else{
-             System.out.println("El numero "+numero+" es inpar");
-         }
-     }
+        String multiplo ="";
+        for(int cont=5; cont>0; cont--){
+            int nu = numero();
+            if((nu%3)==0){
+                if("".equals(multiplo)){
+                    multiplo=" "+nu;
+                }
+                else{
+                    multiplo=multiplo+","+nu;
+                }
+            } 
+        }
+        System.out.print(multiplo);
     }
     public static int numero(){
         Scanner sc = new Scanner(System.in);

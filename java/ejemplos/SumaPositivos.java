@@ -10,20 +10,21 @@ package ejemplos;
  * @author diego
  */
 import java.util.Scanner;
-public class ParesImpares {
+public class SumaPositivos {
     public static void main(String[] args) {
-     Scanner sc = new Scanner(System.in);
-     System.out.print("Introduce el numero maximo: ");
-     int maximo = sc.nextInt();
-     for(int cont=1; cont<=maximo; cont++){
-         int numero = numero();
-         if((numero%2)==0){
-             System.out.println("El numero "+numero+" es par");
-         }
-         else{
-             System.out.println("El numero "+numero+" es inpar");
-         }
-     }
+        boolean positivo = true;
+        int suma=0;
+        int numero=0;
+        while (positivo == true){
+            numero=numero();
+            if(numero>=0){
+                suma=suma+numero;
+            }
+            else{
+                System.out.print("La suma es: "+suma);
+                positivo=false;
+            }
+        }
     }
     public static int numero(){
         Scanner sc = new Scanner(System.in);

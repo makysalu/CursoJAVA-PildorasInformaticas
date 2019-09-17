@@ -16,9 +16,15 @@ public class SumaNumeros {
      System.out.print("Hasta que numero hay que sumar: ");
      int maximo = sc.nextInt();
      int suma=0;
-     for(int cont=maximo; cont>0; cont-- ){
-         suma=suma+cont;
+     for(int cont=maximo; cont>0; cont-- ){      
+         suma=suma+numero();
      }
-     System.out.print("La suma de los numeros hasta el "+maximo+" es "+suma);
+     System.out.print("La suma de los numeros hasta es "+suma);
+    }
+    public static int numero(){
+         Scanner sc = new Scanner(System.in);
+         System.out.print("Introduce un numero: ");
+         int n = sc.nextInt();
+         return n;
     }
 }
